@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hyron.demo3.dao.UserDao">
+    <select id="getAllUser" resultType="com.hyron.demo3.entity.User" >
+        SELECT * FROM userinfo;
+    </select>
+
+    <select id="getUserInfo" resultType="com.hyron.demo3.entity.User">
+        select * from userinfo where username=#{username} and password = #{password}
+    </select>
+</mapper>
