@@ -2,7 +2,8 @@ package com.hyron.demo3.config;
 
 
 import org.springframework.stereotype.Component;
-
+//线程类，由监听器启动调用
+//声明Component
 @Component
 public class StepExcute implements Runnable {
     @Override

@@ -9,8 +9,21 @@ spring:
 
   thymeleaf:
     cache: false
+    check-template: true
+    check-template-location: true
+    #开启MVC thymeleaf视图解析
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
     prefix: classpath:/templates/
     suffix: .html
+  #mvc:
+    #配置，以什么路径来访问静态资源
+    #static-path-pattern: /static/**
+ # resources:
+    #配置，以什么顺序访问文件夹对应的内容
+    #static-locations: classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resources
+
 
 mybatis:
   mapper-locations: classpath*:/mapper/*.xml

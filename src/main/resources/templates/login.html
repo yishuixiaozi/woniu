@@ -1,18 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="EN">
 <head>
     <meta charset="UTF-8">
     <title>登陆页面</title>
+    <link type="text/css" rel="stylesheet"  href="/css/login.css"/>
 </head>
 <body>
 
-请输入用户名与密码登录
-<form action="/user/login2" method="post">
-    用户名：<input type="text" name="username" /><br>
-    密  码：<input type="password" name="password" /><br>
-    <input type="submit" value="登录" />
-    <a href="/user/register" target="_blank">注册</a>
-</form>
+<div class="header">
+    <div class="inner_c">
+        <div class="header_left">Design By Zhou</div>
+        <div class="header_right">
+            <div class="hri_left">
+                <ul>
+                    <li>登录&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+                    <li>注册&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+                    <li>公司合作&nbsp;&nbsp;|</li>
+                </ul>
+            </div>
+            <div class="hri_right">咨询热线：</div>
+        </div>
+    </div>
+</div>
 
+<div class="body_top">
+    <div class="inner_body">
+        <p><img src="../images/flower.jpg"/></p>
+        <p class="p_id1"></p>
+    </div>
+</div>
+
+<div class="body_center">
+    <div class="inner_body2">
+        <div class="bc_left">
+            <img src="../images/jiaju1.jpg">
+        </div>
+        <div class="bc_right">
+            <p></p>
+            <form  method="post" id="loginform1">
+                <input type="text" class="name_input" id="username" name="username" for="reservation" placeholder="注册邮箱/用户名">
+                <input type="password" class="pass_input" id="password" name="password" for="reservation" placeholder="密码">
+                <input type="button" class="p_login" onclick="loginpass()" value="立即登录"/>
+                <a href="#">免费注册</a>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="inner_bottom">
+        <div class="bottom1">
+            <p class="p_l">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy;
+                2004-2014&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XXXXXX（Decorating &nbsp;&nbsp;Houses）
+                &nbsp;&nbsp;&nbsp;&nbsp;ICPXX
+                备XXXXXXXX号 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                增值电信业务经营许可证：&nbsp;&nbsp;XXXXXXXXXXX</p>
+            <p class="p_r"><img src="../images/govIcon.gif" alt=""></p>
+            <!--<p>免责声明：本网站设计用于理论学习</p>-->
+        </div>
+    </div>
+</div>
 </body>
 </html>

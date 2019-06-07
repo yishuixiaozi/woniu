@@ -20,7 +20,7 @@ public class Demo3Application {
         //创建SpringApplication类的对象
         SpringApplication springApplication = new SpringApplication(Demo3Application.class);
         //位该类添加监视器（判断什么时候运行完成）
-        springApplication.addListeners(new ApplicationStartup());
+        //springApplication.addListeners(new ApplicationStartup());
         //启动Application
         springApplication.run(args);
 
