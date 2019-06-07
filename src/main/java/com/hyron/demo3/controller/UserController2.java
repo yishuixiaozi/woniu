@@ -23,7 +23,7 @@ public class UserController2 {
         return "hello";
     }
 
-    //从浏览器跳转到登陆界面进行登陆
+    //从浏览器跳转到登陆界面进行登陆 ewewewew
     @RequestMapping(value = {"loginpage"})
     public  String loginPage(){
         return "login";
