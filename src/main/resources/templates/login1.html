@@ -10,37 +10,37 @@
 
     <!--js操作内容-->
     <script type="text/javascript">
-            function loginpass() {
-                alert("出发消息成功");
-                $.ajax({
-                    data: {username:$("#username").val(), password:$("#password").val()},
-                    type:"post",
-                    dataType:'json',
-                    url:"/usercontroller/mlogin",
-                    error:function (data) {
-                        alert("ajax执行失败");
-                    },
-                    success:function(data){
-                        /*alert(data["msg"]);*///返回的data是一个map,所以data["msg"]是对象的值
-                        var msg1=data["msg"];
+        function loginpass() {
+            alert("出发消息成功");
+            $.ajax({
+                data: {username:$("#username").val(), password:$("#password").val()},
+                type:"post",
+                dataType:'json',
+                url:"/usercontroller/mlogin",
+                error:function (data) {
+                    alert("ajax执行失败");
+                },
+                success:function(data){
+                    /*alert(data["msg"]);*///返回的data是一个map,所以data["msg"]是对象的值
+                    var msg1=data["msg"];
+                    /*alert(msg1);*/
+                    if(msg1=="wrong")
+                    {
                         /*alert(msg1);*/
-                        if(msg1=="wrong")
-                        {
-                            /*alert(msg1);*/
-                            alert("用户名或密码错误");
-                            $("#loginform1").resetForm();
-                        }
-                        else{
-                            alert(msg1);
-                            //这个地方该如何处理
-                            /*top.location.href = "hello.html"*/
-                        }
-                        /*window.location.href = "view/login.jsp";这个跳转后还是子页面*/
-                        /*top.loaction.href的跳转是跳出子页面成为最外层页面*/
+                        alert("用户名或密码错误");
+                        $("#loginform1").resetForm();
                     }
-                });
+                    else{
+                        alert(msg1);
+                        //这个地方该如何处理
+                        /*top.location.href = "hello.html"*/
+                    }
+                    /*window.location.href = "view/login.jsp";这个跳转后还是子页面*/
+                    /*top.loaction.href的跳转是跳出子页面成为最外层页面*/
+                }
+            });
 
-            }
+        }
     </script>
 
 </head>
@@ -75,10 +75,10 @@
         </div>
         <div class="bc_right">
             <p></p>
-            <form  id="loginform1">
+            <form  id="loginform1" action="/usercontroller/login" method="post">
                 <input type="text" class="name_input" id="username" name="username">
                 <input type="password" class="pass_input" id="password" name="password">
-                <input type="button" class="p_login" onclick="loginpass()" value="立即登录"/>
+                <input type="submit" class="p_login"  value="立即登录"/>
                 <a href="#">免费注册</a>
             </form>
         </div>

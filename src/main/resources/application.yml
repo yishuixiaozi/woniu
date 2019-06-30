@@ -8,7 +8,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   thymeleaf:
-    cache: false
+    cache: false #开发的时候关闭缓存，不然没有办法看到实时页面
     check-template: true
     check-template-location: true
     #开启MVC thymeleaf视图解析
@@ -17,7 +17,9 @@ spring:
     mode: HTML5
     prefix: classpath:/templates/
     suffix: .html
-  #mvc:
+    servlet:
+      content-type: text/html
+    #mvc:
     #配置，以什么路径来访问静态资源
     #static-path-pattern: /static/**
  # resources:
