@@ -14,13 +14,16 @@
         th:text 针对对象的使用方法：<h3 th:text="${person.username}"></h3>
     </tr>
 
+    <!--<tr>-->
+        <!--th:text 针对对象的使用方法：<h3 th:text="${person.password}"></h3>-->
+    <!--</tr>-->
     <tr>
-        th:text 针对对象的使用方法：<h3 th:text="${person.password}"></h3>
+        th:text <h3 th:text="${person.password}"></h3>
     </tr>
 
     ,数据库查询成功了
 
-    <form class="form1" th:object="${person}">
+    <form class="form1" th:object="${person}">-->
         <input type="text" class="input-text" value="" th:value="*{username}" name="username"/>
         <input type="text" class="input-text" value="" th:filed="*{password}" placeholder="" id="pass"/>
 

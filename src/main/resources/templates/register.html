@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>注册界面</title>
 </head>
 <body>
-    这里是登陆界面
+    这里是注册界面
+    th:text的使用方法：<h3 th:text="'欢迎您：：' + ${session.username}"></h3>
+
+    <!--<tr>-->
+        <!--th:text 针对对象的使用方法：<h3 th:text="${person.username}"></h3>-->
+    <!--</tr>-->
+
+
 </body>
 </html>

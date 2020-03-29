@@ -22,7 +22,7 @@ spring:
     #mvc:
     #配置，以什么路径来访问静态资源
     #static-path-pattern: /static/**
- # resources:
+   # resources:
     #配置，以什么顺序访问文件夹对应的内容
     #static-locations: classpath:/static,classpath:/public,classpath:/resources,classpath:/META-INF/resources
 
